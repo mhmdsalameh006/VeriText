@@ -1,0 +1,7 @@
+A Study of Introductory Signal Processing
+
+In our laboratory work we used numerical sequences to represent measurements from simple sensors. Digital signal processing allows engineers to manipulate discrete sequences using mathematical operations. A discrete time signal may represent sampled measurements from a physical instrument. The sample rate determines the time interval between adjacent measurements, and aliasing occurs when the sampling frequency is too low to represent the signal bandwidth correctly.
+
+Our experiment compared several moving average filters with different window sizes. We measured the output delay and the attenuation of higher frequency noise. We recorded all settings before repeating each experiment on the same test signal. The results varied with the filter length and the characteristics of the input data.
+
+We found that validating simulation results against measured data improved our ability to identify mistakes. The group still needs to test whether the results generalize to signals acquired from different instruments.

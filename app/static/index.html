@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101e35"><title>VeriText — Academic Integrity Workspace</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div id="login-screen" class="login-screen hidden">
+  <div class="auth-visual">
+    <div class="auth-brand"><span class="brand-mark">V<span>.</span></span> VeriText <small>INTEGRITY SYSTEMS</small></div>
+    <div class="auth-art" aria-hidden="true"><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="art-sheet"><div class="sheet-header"></div><div class="sheet-line l1"></div><div class="sheet-line l2"></div><div class="sheet-line l3"></div><div class="sheet-line l4"></div><div class="sheet-line l5"></div><div class="sheet-match"></div><div class="sheet-shield">✓</div></div></div>
+    <div class="auth-visual-bottom"><div class="eyebrow light">THE RESEARCH INTEGRITY WORKSPACE</div><h2>Evidence before<br>assumptions.</h2><p>Review originality, investigate matching passages, and evaluate writing signals in one workspace.</p><div class="auth-caps"><span>Source comparison</span><span>AI model validation</span><span>Document reports</span></div></div>
+  </div>
+  <div class="auth-panel"><div class="auth-panel-inner"><div class="signin-badge">SECURE WORKSPACE ACCESS</div><h1>Welcome back.</h1><p class="subtext">Sign in to review submissions and manage your institution's reference collection.</p>
+    <form id="login-form" class="form-stack"><label>Email address<input name="email" type="email" autocomplete="username" required placeholder="admin@university.edu"></label><label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"></label><p class="error hidden" id="login-error"></p><button type="submit" class="btn btn-primary large full" id="login-submit">Sign in to VeriText <span>→</span></button></form>
+    <p class="auth-footnote">Administrator accounts are created through the server CLI.<br>There are no default credentials.</p>
+  </div></div>
+</div>
+<div id="shell" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="side-logo"><span class="brand-mark">V<span>.</span></span><div>VeriText <small>INTEGRITY SYSTEMS</small></div></div>
+    <div class="side-context"><span class="context-glyph">▦</span><div><b>Institution workspace</b><small>Local source collection</small></div><span class="context-chevron">⌄</span></div>
+    <nav class="side-nav" aria-label="Main navigation">
+      <div class="nav-label">WORKSPACE</div>
+      <button data-page="dashboard" class="nav-item active"><span class="nav-icon">◫</span> Overview</button>
+      <button data-page="scan" class="nav-item"><span class="nav-icon">⊞</span> New analysis</button>
+      <button data-page="reports" class="nav-item"><span class="nav-icon">▤</span> All reports</button>
+      <button data-page="sources" class="nav-item"><span class="nav-icon">▥</span> Source library</button>
+      <div class="nav-label">ADMINISTRATION</div>
+      <button data-page="model" class="nav-item"><span class="nav-icon">◈</span> AI model lab</button>
+      <button data-page="team" class="nav-item admin-only"><span class="nav-icon">♙</span> Team & access</button>
+      <button data-page="audit" class="nav-item admin-only"><span class="nav-icon">◷</span> Activity log</button>
+    </nav>
+    <div class="side-bottom"><div class="help-card"><div class="help-dot">i</div><b>Evidence-led by design</b><p>Similarity is not plagiarism. AI scores are not proof of authorship.</p></div><div class="account" id="account"><div class="avatar">AD</div><div class="account-text"><b>Account</b><small>Administrator</small></div><button id="logout" title="Sign out" class="icon-button">↗</button></div></div>
+  </aside>
+  <div class="main-layout">
+    <header class="topbar"><div class="top-left"><button id="mobile-menu" class="icon-button mobile-menu" aria-label="Toggle menu">☰</button><span class="breadcrumb">Workspace</span><span class="slash">/</span><strong id="current-page-name">Overview</strong></div><div class="top-right"><span class="local-pill"><span class="pulse"></span> Local-first analysis</span><div class="top-avatar" id="top-avatar">AD</div></div></header>
+    <main id="page-content" class="page-content"><div class="loading"><div class="spinner"></div> Loading workspace…</div></main>
+    <footer class="footer">VeriText v1.0 <span>•</span> Academic integrity review platform <span class="footer-right">Evidence informs decisions. People make them.</span></footer>
+  </div>
+</div>
+<div class="toast-container" id="toasts" aria-live="polite"></div>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

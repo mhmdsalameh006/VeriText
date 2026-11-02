@@ -1,0 +1,7 @@
+Fundamentals of Signal Processing — Example Reference
+
+Digital signal processing allows engineers to manipulate discrete sequences using mathematical operations. A discrete time signal may represent sampled measurements from a physical instrument. The sample rate determines the time interval between adjacent measurements, and aliasing occurs when the sampling frequency is too low to represent the signal bandwidth correctly.
+
+A linear time invariant system can be described by an impulse response. Convolution of an input sequence with the impulse response produces the output sequence, provided the system satisfies linearity and time invariance. Finite impulse response filters can implement smoothing, differentiation, and frequency selective operations using fixed coefficients.
+
+Practical filter design requires choosing a transition bandwidth, ripple requirements, computational cost, and numerical precision. Engineers compare the achieved frequency response against specifications and measure system behavior using test signals. Validation should include both simulated inputs and independently measured observations.
